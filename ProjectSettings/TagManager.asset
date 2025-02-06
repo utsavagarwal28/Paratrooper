@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: GunBase
+    uniqueID: 1510344703
+    locked: 0
+  - name: GroundLine
+    uniqueID: 400928781
+    locked: 0
+  - name: GunBarrelPivotCircle
+    uniqueID: 1423921041
+    locked: 0

@@ -1,18 +1,18 @@
 fileFormatVersion: 2
-guid: b1edea89a2131c14188d5b0556011c48
+guid: 9a1df13aca2c7f041a4578041a08d3e1
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
   fontSize: 16
-  forceTextureCase: -1
+  forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Ac437 DTK BIOS
+  - Ac437 IBM BIOS
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 2
+  fontRenderingMode: 0
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
