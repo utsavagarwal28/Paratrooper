@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     public EnemySpawner enemySpawner;
 
+    // Level Difficulty
     public void AdjustDifficulty(int level)
     {
         if (level == 1)
@@ -20,9 +21,9 @@ public class LevelManager : MonoBehaviour
         {
             enemySpawner.SetSpawnParameters(onlyHelicopters: false, onlyJets: false, spawnRate: 3f, maxDrops: 2);
         }
-        else if (level >= 4)
+        else if (level == 4)
         {
-            enemySpawner.SetSpawnParameters(onlyHelicopters: false, onlyJets: false, spawnRate: Mathf.Max(2f, 5f - (level * 0.3f)), maxDrops: Mathf.Min(level, 5));
+            enemySpawner.SetSpawnParameters(onlyHelicopters: false, onlyJets: false, spawnRate: 2f, maxDrops: 4);
         }
     }
 }

@@ -10,6 +10,8 @@ TagManager:
   - Bullet
   - Helicopter
   - Jet
+  - NoDropLayer
+  - PyramidBullet
   layers:
   - Default
   - TransparentFX
@@ -47,12 +49,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: GunBase
+  - name: Gun
     uniqueID: 1510344703
     locked: 0
   - name: GroundLine
     uniqueID: 400928781
     locked: 0
-  - name: GunBarrelPivotCircle
-    uniqueID: 1423921041
+  - name: AttackTrooper
+    uniqueID: 1445732949
     locked: 0

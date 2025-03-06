@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4831260116554561124}
-  - component: {fileID: 7208209262173174360}
+  - component: {fileID: 3911422718243692719}
+  - component: {fileID: 4781729551346090285}
   - component: {fileID: 4109354028019369701}
   - component: {fileID: 8782653066574882032}
   m_Layer: 0
   m_Name: Paratropper
-  m_TagString: Trooper
+  m_TagString: ParaTrooper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +38,7 @@ Transform:
   - {fileID: 8700010040697832733}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7208209262173174360
+--- !u!114 &3911422718243692719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,14 +53,21 @@ MonoBehaviour:
   trooperWithParachute: {fileID: 8748755689901321812}
   trooperWithoutParachute: {fileID: 8023467661601759470}
   trooperDeath: {fileID: 8944840055102929880}
-  triggerCollider: {fileID: 8782653066574882032}
-  solidCollider: {fileID: 5345118947076538793}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  troopLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  parachuteCollider: {fileID: 8782653066574882032}
+  troopController: {fileID: 4781729551346090285}
+--- !u!114 &4781729551346090285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26883657210337164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252f356f0f3229348bf051e4dd70719d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trooperCollider: {fileID: 5345118947076538793}
 --- !u!50 &4109354028019369701
 Rigidbody2D:
   serializedVersion: 4
@@ -117,7 +125,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -292,8 +300,8 @@ Transform:
   m_GameObject: {fileID: 8748755689901321812}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.07, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.0692, z: 0}
+  m_LocalScale: {x: 1, y: 1.0077, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4831260116554561124}

@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Trooper"))
+        if (other.CompareTag("ParaTrooper"))
         {
             other.GetComponent<ParatrooperController>().GetShot();
             Destroy(gameObject);

@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     private int level = 1;
     private int hiScore = 0;
     private int scoreToNextLevel = 500;
+    private int tempHiScore;
 
     private LevelManager levelManager;
 
@@ -70,10 +71,13 @@ public class UIManager : MonoBehaviour
         score = 0;
         level = 1;
         scoreToNextLevel = 500;
+        tempHiScore = hiScore;
         levelManager.AdjustDifficulty(level);
         UpdateUI();
         gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        hiScore = tempHiScore;
+        UpdateUI();
     }
 
     public void QuitGame()
