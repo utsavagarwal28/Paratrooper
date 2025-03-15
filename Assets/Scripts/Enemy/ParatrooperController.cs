@@ -8,8 +8,12 @@ public class ParatrooperController : MonoBehaviour
     public GameObject trooperWithoutParachute;
     public GameObject trooperDeath;
     public Collider2D parachuteCollider;
+    public Collider2D troopCollider;
     private Rigidbody2D rb;
     public TroopController troopController;
+    public int troopInstanceId;
+    public ParatrooperController paratrooperController;
+
 
     private bool isShot = false;
     private bool hasLanded = false;
@@ -18,8 +22,18 @@ public class ParatrooperController : MonoBehaviour
 
     private void Start()
     {
+        troopInstanceId = this.GetInstanceID();
+
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, -1f);
+
+        // Get reference to the TroopController in the scene
+        troopController = FindAnyObjectByType<TroopController>();
+
+        if (troopController == null)
+        {
+            Debug.LogError("TroopController not found! Make sure it exists in the scene.");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -53,17 +67,22 @@ public class ParatrooperController : MonoBehaviour
 
     public void AssignTroopList() //Adding Troop to list
     {
+
+
         if (transform.position.x > 0)
         {
-            troopController.rightTroops.Add(this.GetInstanceID(), transform.position.x);
+            ParatrooperData newTrooper = new ParatrooperData(troopInstanceId, transform.position.x, , troopCollider);
+            troopController.rightTroops.Add(troopInstanceId, transform.position.x, GetComponent("ParatrooperController"), troopCollider);
             Debug.Log(this.GetInstanceID());
             Debug.Log(troopController.rightTroops[this.GetInstanceID()]);
+            Debug.Log($"Right Troops Count: {troopController.rightTroops.Count}");
         }
         else
         {
             troopController.leftTroops.Add(this.GetInstanceID(), -transform.position.x);
             Debug.Log(this.GetInstanceID());
             Debug.Log(troopController.leftTroops[this.GetInstanceID()]);
+            Debug.Log($"Left Troops Count: {troopController.leftTroops.Count}");
         }
     }
 

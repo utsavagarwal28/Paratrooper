@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4831260116554561124}
-  - component: {fileID: 3911422718243692719}
-  - component: {fileID: 4781729551346090285}
+  - component: {fileID: -723670269924466872}
   - component: {fileID: 4109354028019369701}
   - component: {fileID: 8782653066574882032}
   m_Layer: 0
@@ -38,7 +37,7 @@ Transform:
   - {fileID: 8700010040697832733}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3911422718243692719
+--- !u!114 &-723670269924466872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,20 +53,8 @@ MonoBehaviour:
   trooperWithoutParachute: {fileID: 8023467661601759470}
   trooperDeath: {fileID: 8944840055102929880}
   parachuteCollider: {fileID: 8782653066574882032}
-  troopController: {fileID: 4781729551346090285}
---- !u!114 &4781729551346090285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26883657210337164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 252f356f0f3229348bf051e4dd70719d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trooperCollider: {fileID: 5345118947076538793}
+  troopCollider: {fileID: 5345118947076538793}
+  troopController: {fileID: 0}
 --- !u!50 &4109354028019369701
 Rigidbody2D:
   serializedVersion: 4

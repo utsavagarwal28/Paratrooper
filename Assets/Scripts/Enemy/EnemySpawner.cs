@@ -39,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
 
         int enemyType = onlyHelicopters ? 1 : onlyJets ? 0 : Random.Range(0, 2);
         bool spawnFromRight = Random.value > 0.5f;
-        float spawnHeight = Random.Range(3.5f, 5.0f);
+        float spawnHeight = Random.Range(3.5f, 4.5f);
 
 
         Vector3 spawnPosition;
